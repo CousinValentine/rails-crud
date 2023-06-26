@@ -1,0 +1,14 @@
+Hello from the Show of one restaurant
+
+<h1><%= @restaurant.name %></h1>
+<p>Address: <%= @restaurant.address %></p>
+<p>Rating: <%= @restaurant.rating %></p>
+
+<%= link_to "Delete",
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<%= link_to "Back",restaurants_path%>
+<%= link_to "Edit", edit_restaurant_path%>
+
